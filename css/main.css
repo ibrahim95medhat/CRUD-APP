@@ -1,0 +1,112 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+
+}
+html{
+    background-color:var(--bg-color) ;
+}
+
+:root{
+    --heading-color:#FEC260;
+    --bg-color:#F7ECDE;
+    --btn-color:#d1512d;
+}
+.main-app{
+    padding: 60px;
+    background-color:var(--bg-color) ;
+}
+.main-heading{
+    font-family: 'Pacifico', cursive;
+    position: relative;
+    width: fit-content;
+    z-index: 4;
+ 
+}
+.main-heading:hover::after{
+height: 75%;
+
+}
+.main-heading::after{
+    content: "";
+    position: absolute;
+    background-color:var(--heading-color) ;
+    height: 30%;
+    width: 100%;
+    z-index: -1;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.5s;
+}
+.input-heading{
+ width: fit-content;
+ margin: auto;
+ font-family: 'Righteous', cursive;
+ font-size: 25px;
+ background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.inputs{
+    margin: 60px 0;
+    padding: 50px 0;
+    border-top: 2px  dotted black;
+    border-bottom: 2px  dotted black;
+}
+.form-control:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: #fec260;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #fec26055;
+}
+
+.sub-button{
+    background-color: var(--btn-color) !important;
+    color: #fff;
+    
+}
+.visit-button .link{
+    text-decoration: none;
+    color: #fff;
+}
+.btn-warning {
+    --bs-btn-color: #000;
+    --bs-btn-bg: #8A9E23;
+    --bs-btn-border-color: #8A9E23;
+}
+.btn-warning:hover {
+    color: #fff;
+    background-color: #8A9E23;
+    border-color: #8A9E23;
+}
+.sub-button:hover{
+    background-color: #a03315 !important;
+    color: #fff;
+}
+.output{
+    background-color: white;
+}
+#invalid-msg{
+    display: none;
+}
+/* modal style */
+
+.modal .modal-header .circle{
+width: 25px;
+height: 25px;
+border-radius: 50%;
+
+margin-right: 10px;
+}
+.modal .modal-body ul li{
+    list-style: none;
+
+}
+
+
+
+/* modal style */

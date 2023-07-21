@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-app">
+        <div class="container">
+            <h1 class="text-center  main-heading m-auto">Bookmarker</h1>
+
+            <div class="inputs form-group ">
+                <h2 class="input-heading"><i class="fa-solid fa-bookmark"></i>bookmark your favourite sites<i class="fa-solid fa-bookmark"></i></h2>
+                <label for="sitename" class="mb-2 mt-3"><i class="fa-solid fa-book-bookmark me-2"></i>Site Name</label>
+                <input class="form-control validation-icon" id="sitename" placeholder="Bookmark Name" name="sitename">
+                <p id="invalid-msg" class="invalid-message">this site entered previously </p>
+                <label for="siteurl"class="mb-2 mt-3"><i class="fa-solid fa-link me-2"></i>Site URL</label>
+                <input class="form-control" id="siteurl" placeholder="Website URL" name="siteurl">
+                <div class="text-center py-3"><button id="submit-button"class="sub-button btn px-5" onclick="addSite()">submit</button></div>
+            </div>
+               
+
+
+            <!-- start modal -->
+
+  
+  <!--start Modal -->
+  
+
+            <div class="modal" id="modal" tabindex="-1">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title d-flex me-auto justify-content-center"><div class="circle bg-black"></div><div class="circle bg-danger"></div><div class="circle bg-info"></div></h5>
+                      <button id="modal-close" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      
+                    </div>
+                    <div class="modal-body">
+                        <h4>Site Name or Url is not valid, Please follow the rules below :</h4>
+                      <ul>
+                        <li class="fs-4"><i class="fa-regular fa-circle-right me-2" style="color: #c71f1f;"></i>Site name must contain at least 3 characters</li>
+                        <li class="fs-4"><i class="fa-regular fa-circle-right me-2" style="color: #c71f1f;"></i>Site URL must be a valid one</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- end  modal -->
+
+
+            
+            <div class="output">
+                <table class="table m-auto text-center">
+                    <thead>
+                        <tr>
+                            <th>index</th>
+                            <th>website</th>
+                            <th>visit</th>
+                            <th>delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="data" class="tBody">
+                    
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
