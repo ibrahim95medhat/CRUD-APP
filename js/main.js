@@ -8,7 +8,7 @@ let invMsg=document.getElementById("invalid-msg");
 
 
 //check whether there is data in local storage or not to display 
-if(storage!==null){
+if(JSON.parse(localStorage.getItem("sites")).length!==0){
     sites=JSON.parse(localStorage.getItem("sites"));
     displayData();
 }
