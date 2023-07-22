@@ -8,7 +8,7 @@ let invMsg=document.getElementById("invalid-msg");
 
 
 //check whether there is data in local storage or not to display 
-if(JSON.parse(localStorage.getItem("sites")).length!==0){
+if(JSON.parse(localStorage.getItem("sites"))!==null){
     sites=JSON.parse(localStorage.getItem("sites"));
     displayData();
 }
@@ -52,7 +52,7 @@ function addSite(){
      }
 
 //check whether there is data in local storage or not to add and display or check if url name is repeated 
-    if(JSON.parse(localStorage.getItem("sites")).length===0){
+    if(JSON.parse(localStorage.getItem("sites"))===null){
         console.log("add when no storage and length of storage")
     sites.push(siteData);
     clearData();
