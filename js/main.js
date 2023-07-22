@@ -53,7 +53,7 @@ function addSite(){
 
 //check whether there is data in local storage or not to add and display or check if url name is repeated 
     if(JSON.parse(localStorage.getItem("sites"))===null){
-        console.log("add when no storage and length of storage")
+        // console.log("add when no storage and length of storage")
     sites.push(siteData);
     clearData();
     localStorage.setItem("sites",JSON.stringify(sites))
@@ -64,9 +64,9 @@ function addSite(){
     else{
         //check if url name is repeated or not
        let flag=0;
-        console.log("add when there is data in storage and length of storage")
-        console.log(JSON.parse(localStorage.getItem("sites")).length)
-        console.log(sites)
+        // console.log("add when there is data in storage and length of storage")
+        // console.log(JSON.parse(localStorage.getItem("sites")).length)
+        // console.log(sites)
         sites.forEach(e=>{
             e.name===document.getElementById("sitename").value?flag=1:'';
         })
