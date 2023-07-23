@@ -121,7 +121,7 @@ function displayData(){
         trs+=`<tr><td>${i+1}</td>
         <td>${sites[i].name}</td>
         <td><button class="visit-button btn btn-warning"><a class="link" href="https://${sites[i].url}/" ><i class="fa-regular fa-eye me-1"></i>Visit</a></button></td>
-        <td><button class="btn btn-danger" onclick="remove()"><i class="fa-solid fa-trash-can me-1"></i>Delete</button></td><tr>`;
+        <td><button class="delete-button btn btn-danger" onclick="remove()"><i class="fa-solid fa-trash-can me-1"></i>Delete</button></td><tr>`;
         
     }
     tBody.innerHTML=trs;

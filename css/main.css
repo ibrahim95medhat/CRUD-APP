@@ -15,7 +15,7 @@ html{
     --btn-color:#d1512d;
 }
 .main-app{
-    padding: 60px;
+    padding: 40px;
     background-color:var(--bg-color) ;
 }
 .main-heading{
@@ -110,3 +110,34 @@ margin-right: 10px;
 
 
 /* modal style */
+
+/* start media query for second heading */
+
+@media only screen and (max-width:768px){
+    .input-heading{
+        font-size:15px;
+    }
+    .main-app{
+        padding: 0;
+    }
+   
+}
+@media only screen and (max-width:576px){
+
+    thead tr th{
+        font-size: 12px;
+    }
+
+    .visit-button,.delete-button{
+        padding:1px 3px;
+        font-size: 14px;
+    }
+    tbody tr td{
+        font-size: 14px;
+    }
+
+}
+
+
+
+/* end media query for second heading */
